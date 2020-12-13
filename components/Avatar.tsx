@@ -15,6 +15,7 @@ export type AvatarProps = AvatarPrimitiveProps &
     fallback?: React.ReactNode;
     status?: StatusColors['color'];
   };
+
 export type AvatarVariants = StitchesVariants<typeof Avatar>;
 
 export const StyledAvatar = styled(AvatarPrimitive, {
@@ -136,32 +137,6 @@ export const StyledAvatar = styled(AvatarPrimitive, {
       },
       circle: {
         borderRadius: '50%',
-      },
-    },
-    inactive: {
-      true: {
-        opacity: '.3',
-      },
-    },
-    interactive: {
-      true: {
-        '::after': {
-          content: '""',
-          position: 'absolute',
-          top: '0',
-          right: '0',
-          bottom: '0',
-          left: '0',
-          backgroundColor: 'rgba(0,0,0,.04)',
-          opacity: '0',
-          pointerEvents: 'none',
-          transition: 'opacity 25ms linear',
-        },
-        ':hover': {
-          '::after': {
-            opacity: '1',
-          },
-        },
       },
     },
   },
